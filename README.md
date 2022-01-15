@@ -10,7 +10,7 @@ Reveal Kubernetes secret resources values
 # Create secret to test command
 $ kubectl create secret generic test-secret -n default --from-literal=foo=bar --from-literal=boo=far --from-literal=moo=gar
 
-# Install
+# Build
 $ git clone https://github.com/dubs11kt/reveal-secret-values
 $ go build
 
