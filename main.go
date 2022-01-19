@@ -13,8 +13,15 @@ import (
 
 func main() {
 
+	loadingRules := clientcmd.NewDefaultClientConfigLoadingRules()
+	// if you want to change the loading rules (which files in which order), you can do so here
+	configOverrides := &clientcmd.ConfigOverrides{}
+	// if you want to change override values or bind them to flags, there are methods to help you
+	kubeConfig := clientcmd.NewNonInteractiveDeferredLoadingClientConfig(loadingRules, configOverrides)
+	namespace, _, _ := kubeConfig.Namespace()
+
 	// Command line arguments
-	n := flag.String("namespace", "default", "namespace")
+	n := flag.String("namespace", namespace, "namespace")
 	s := flag.String("secret", "default-secret", "secret name")
 	flag.Parse()
 
