@@ -1,4 +1,4 @@
-module github.com/dubs11kt/reveal-secret-values
+module github.com/dubs11kt/reveals
 
 go 1.17
 
