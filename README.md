@@ -1,4 +1,4 @@
-# reveal-secrets
+# reveals
 
 ## What is this?
 
@@ -11,11 +11,11 @@ Reveal Kubernetes secret resources values
 $ kubectl create secret generic test-secret -n default --from-literal=foo=bar --from-literal=boo=far --from-literal=moo=gar
 
 # Build
-$ git clone https://github.com/dubs11kt/reveal-secret-values
+$ git clone https://github.com/dubs11kt/reveals
 $ go build
 
 # Exec
-$ ./reveal-secret-values --namespace default --secret test-secret
+$ ./reveals --namespace default --secret test-secret
 boo : far
 foo : bar
 moo : gar
