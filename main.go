@@ -22,7 +22,7 @@ func main() {
 
 	// Command line arguments
 	n := flag.String("namespace", namespace, "namespace")
-	s := flag.String("secret", "default-secret", "secret name")
+	s := flag.String("secret", "default", "secret name")
 	flag.Parse()
 
 	client, _ := newClient()
