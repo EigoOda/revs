@@ -28,8 +28,8 @@ func showSecretList(cmd *cobra.Command, args []string) (err error) {
 		return
 	}
 
-	for i, secret := range secrets.Items {
-		fmt.Printf("[%d] %s\n", i, secret.GetName())
+	for _, secret := range secrets.Items {
+		fmt.Println(secret.GetName())
 	}
 
 	return nil
