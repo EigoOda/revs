@@ -1,14 +1,16 @@
-# reveals
+# choppy
 
 ## What is this?
 
-Reveal Kubernetes secret resources values
+Handle Kubernetes secret resources
+
 
 ## Install
 
 ```bash
-$ go install github.com/dubs11kt/reveals@latest
+$ go install github.com/dubs11kt/choppy@latest
 ```
+
 
 ## How to use?
 
@@ -17,9 +19,14 @@ $ go install github.com/dubs11kt/reveals@latest
 $ kubectl create secret generic test-secret -n default --from-literal=foo=bar --from-literal=boo=far --from-literal=moo=gar
 
 # Exec
-$ reveals --namespace default --secret test-secret
+## Show secrets
+$ choppy list
+default-token-kvx5z
+test-secret
+
+## Reveal secret value
+$ choppy --namespace default --secret test-secret
 boo : far
 foo : bar
 moo : gar
 ```
-
