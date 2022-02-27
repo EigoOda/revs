@@ -37,3 +37,7 @@ func NewClient() (kubernetes.Interface, error) {
 
 	return kubernetes.NewForConfig(kubeConfig)
 }
+
+func init() {
+	rootCmd.CompletionOptions.DisableDefaultCmd = true
+}
