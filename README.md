@@ -1,4 +1,4 @@
-# choppy
+# opens
 
 ## What is this?
 
@@ -8,7 +8,7 @@ Handle Kubernetes secret resources
 ## Install
 
 ```bash
-$ go install github.com/dubs11kt/choppy@latest
+$ go install github.com/dubs11kt/opens@latest
 ```
 
 
@@ -19,12 +19,12 @@ $ go install github.com/dubs11kt/choppy@latest
 $ kubectl create secret generic test-secret -n default --from-literal=foo=bar --from-literal=boo=far --from-literal=moo=gar
 
 # Show secrets
-$ choppy list
+$ opens list
 default-token-kvx5z
 test-secret
 
 # Reveal secret value
-$ choppy --namespace default --secret test-secret
+$ opens --namespace default --secret test-secret
 boo : far
 foo : bar
 moo : gar
