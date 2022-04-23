@@ -24,7 +24,7 @@ default-token-kvx5z
 test-secret
 
 # Reveal secret value
-$ opens --namespace default --secret test-secret
+$ opens reveal --namespace default --secret test-secret
 boo : far
 foo : bar
 moo : gar
