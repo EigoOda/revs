@@ -29,8 +29,17 @@ func Execute() {
 	}
 }
 
+func getEnv(key, fallback string) string {
+	value := os.Getenv(key)
+	if len(value) == 0 {
+		return fallback
+	}
+	return value
+}
+
 func NewClient() (kubernetes.Interface, error) {
-	kubeConfig, err := clientcmd.BuildConfigFromFlags("", clientcmd.RecommendedHomeFile)
+	kubeconfig := getEnv("KUBECONFIG", clientcmd.RecommendedHomeFile)
+	kubeConfig, err := clientcmd.BuildConfigFromFlags("", kubeconfig)
 	if err != nil {
 		return nil, err
 	}
