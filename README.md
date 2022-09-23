@@ -1,5 +1,3 @@
-# opens
-
 ## What is this?
 
 Handle Kubernetes secret resources
@@ -8,7 +6,7 @@ Handle Kubernetes secret resources
 ## Install
 
 ```bash
-$ go install github.com/dubs11kt/opens@latest
+$ go install github.com/dubs11kt/revs@latest
 ```
 
 
@@ -19,12 +17,12 @@ $ go install github.com/dubs11kt/opens@latest
 $ kubectl create secret generic test-secret -n default --from-literal=foo=bar --from-literal=boo=far --from-literal=moo=gar
 
 # Show secrets
-$ opens list
+$ revs list
 default-token-kvx5z
 test-secret
 
 # Reveal secret value
-$ opens reveal --namespace default --secret test-secret
+$ revs reveal --namespace default --secret test-secret
 boo : far
 foo : bar
 moo : gar

@@ -11,11 +11,11 @@ import (
 
 var (
 	rootCmd = &cobra.Command{
-		Use:   "opens",
-		Short: "opens is command that reveal Kubernetes secret resources",
-		Long:  `opens is command that reveal Kubernetes secret resources without base64 decode`,
+		Use:   "revs",
+		Short: "revs is command that reveal Kubernetes secret resources",
+		Long:  `revs is command that reveal Kubernetes secret resources without base64 decode`,
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Println("opens called")
+			fmt.Println("revs called")
 		},
 	}
 )

@@ -1,4 +1,4 @@
-module github.com/dubs11kt/opens
+module github.com/dubs11kt/revs
 
 go 1.17
 

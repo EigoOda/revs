@@ -1,6 +1,6 @@
 package main
 
-import "github.com/dubs11kt/opens/cmd"
+import "github.com/dubs11kt/revs/cmd"
 
 func main() {
 	cmd.Execute()
