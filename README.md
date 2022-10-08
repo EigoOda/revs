@@ -1,12 +1,15 @@
 ## What is this?
 
-Handle Kubernetes secret resources
+Handle Kubernetes secret resources. You can
+- list secrets
+- reveal secret values
+- etc.
 
 
 ## Install
 
 ```bash
-$ go install github.com/dubs11kt/revs@latest
+go install github.com/dubs11kt/revs@latest
 ```
 
 
